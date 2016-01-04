@@ -51,26 +51,26 @@ This whole thing came from my struggles with creating **an all-in-one-shot metho
   ####Option #1####
         C:\MyComputer\Downloads\PAT> Create_Single_Executable_with_NO_CONSOLE.bat C:\Path\to\the\python\file.py
 
-  *output exe file results in a GUI app when double clicked*
+  *The output executable file results in a GUI app when double clicked*
 
   ####Option #2####
       C:\MyComputer\Downloads\PAT> Create_Single_Executable_with_CONSOLE.bat C:\Path\to\the\python\file.py
       
-  *output exe file results in a WINDOWS CONSOLE app when double clicked -- expects commandline activity ONLY*
+  *The output executable file results in a WINDOWS CONSOLE app when double clicked -- expects commandline activity ONLY*
 
-  3. **Your new single-file-executable is done!** Check for it in this location:
+  3. **Your new single-file-executable is done!** Check for it in this location
 
-      C:\Original\Directory\ApplicationDistribution64bit\NameOfPythonFile\dist
+        C:\Original\Directory\ApplicationDistribution64bit\NameOfPythonFile\dist
 
   If you do edit/change the original python file that has just been previously compiled, please delete the folder/contents of **\NameOfPythonFile\** prior to next compile kickoff (you'll want to delete the historical/artifact files) 
 
 
   4. **Coffee break** -- or if you wany to edit/add ICONS to the executable (and other items too), please look at the generated ".spec" file and PyInstaller documentation for configuration details.  You'll just need to kick off this again in the windows console:
 
-      pyi-build.exe C:\path\to\the\pythonfile.spec
+        pyi-build.exe C:\path\to\the\pythonfile.spec
 
-###future stuff###
-* I'll add my "right-click-to-compile" option/application
+###future stuff???###
+* I'll add my "right-click-to-compile" option/application (a windows context menu)
 * add a feature within python file to referrence icons (so you don't need to manually edit/touch the .spec file
 * I'll be back to tinker with this later.
 
