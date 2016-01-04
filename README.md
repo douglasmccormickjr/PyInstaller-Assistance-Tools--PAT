@@ -1,3 +1,5 @@
+[![GitHub version](https://badge.fury.io/gh/douglasmccormickjr%2FPyInstaller-Assistance-Tools--PAT.svg)](https://badge.fury.io/gh/douglasmccormickjr%2FPyInstaller-Assistance-Tools--PAT)
+
 # PyInstaller-Assistance-Tools--PAT
 "...an easier way to compile your python application with PyInstaller..."
 
@@ -76,5 +78,6 @@ This whole thing came from my struggles with creating **an all-in-one-shot metho
 
 
 Enjoy!
+
 -Doug Jr.
 
