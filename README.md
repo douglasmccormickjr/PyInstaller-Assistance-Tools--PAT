@@ -47,7 +47,7 @@ that means the app/files look something like this in terms of directory structur
 
 Please note that the data/files/folders I'm bundling for my app are below the main executable/script that I'll be compiling...the "_MEIPASS" part in the function lets pyinstaller know that it's working as a compiled application...**VERY IMPORTANT NOTE: Please use the function "resource_path"** since the "pyi-fixspec.exe" application will be looking for that phrase/function while parsing/correcting the python application pathing
 
-(2) Goto the directory containing the 2 batch files mentioned above and type in either:
+ 2. **Goto the directory containing the 2 batch files** mentioned above and type in either:
 
    C:\MyComputer\Downloads\PAT> Create_Single_Executable_with_NO_CONSOLE.bat C:\Path\to\the\python\file.py
 (output exe file results in a GUI app when double clicked)
@@ -57,14 +57,14 @@ or the second option...
    C:\MyComputer\Downloads\PAT> Create_Single_Executable_with_CONSOLE.bat C:\Path\to\the\python\file.py
 (output exe file results in a WINDOWS CONSOLE app when double clicked -- expects commandline activity ONLY)
 
-(3) Your new single-file-executable is done! Check for it in this location:
+(3) **Your new single-file-executable is done!** Check for it in this location:
 
     C:\Original\Directory\ApplicationDistribution64bit\NameOfPythonFile\dist
 
 If you do edit/change the original python file that has just been previously compiled, please delete the folder/contents of **\NameOfPythonFile\** prior to next compile kickoff (you'll want to delete the historical/artifact files) 
 
 
-(4) Coffee break -- if you wany to edit/add ICONS to the executable (and other items too), please look at the generated ".spec" file and PyInstaller documentation for configuration details.  You'll just need to kick off this again in the windows console:
+(4) **Coffee break** -- or if you wany to edit/add ICONS to the executable (and other items too), please look at the generated ".spec" file and PyInstaller documentation for configuration details.  You'll just need to kick off this again in the windows console:
 
     pyi-build.exe C:\path\to\the\pythonfile.spec
 
