@@ -17,7 +17,7 @@ This whole thing came from my struggles with creating **an all-in-one-shot metho
 * pyi-fixspec.exe
 * pyi-fixpec.py (optional -- this is the source file for the executable -- not needed)
 
-Place the exectuable file called "pyi-fixspec.exe" inside the previous "Scripts" folder I mentioned above...this makes compiling much easier in the long run!
+ 4. **Place the exectuable file called "pyi-fixspec.exe" inside the previous "Scripts" folder I mentioned above**...this makes compiling much easier in the long run!
 
 Ok, now onto the slight "coding" changes in your file...Here is what to do:
 
