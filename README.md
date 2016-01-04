@@ -26,7 +26,7 @@ This whole thing came from my struggles with creating **an all-in-one-shot metho
 
   Here's the piece of code I use:
 
-    def resource_path(relative_path):
+      def resource_path(relative_path):
         """ Get absolute path to resource, works for dev and for PyInstaller """
         if hasattr(sys, '_MEIPASS'):
             return os.path.join(sys._MEIPASS, relative_path)
