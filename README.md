@@ -19,9 +19,8 @@ This whole thing came from my struggles with creating **an all-in-one-shot metho
 
  4. **Place the exectuable file called "pyi-fixspec.exe" inside the previous "Scripts" folder I mentioned above**...this makes compiling much easier in the long run!
 
-Ok, now onto the slight "coding" changes in your file...Here is what to do:
 
-###let's get it working now...###
+###let's get it working now...some slight code changes to your python application###
 
   1. **I use a standard function that references the location of applications/scripts** that my python application needs to utilize to work while being executed/operated.  This function operates both when the app is a standalone python script or when it's fully compiled via pyinstaller.
 
@@ -35,9 +34,16 @@ Here's the piece of code I use:
 
 and here's my app using it....
 
-    source = resource_path("data\\some_archive.zip")
+    source = resource_path("data\my_archive_file.zip")
 
-(please note that the data/files/folders I'm bundling for my app are below the main executable/script that I'll be compiling...the "_MEIPASS" part in the function lets pyinstaller know that it's working as a compiled application...**VERY IMPORTANT: Please use the function "resource_path"** since the "pyi-fixspec.exe" application will be looking for that phrase/function while parsing/correcting the python application pathing)
+that means the app/files look something like this in terms of directory structure:
+
+    C:\Path\To\Application\myscript_001.py
+    C:\Path\To\Application\data\my_archive_file.zip
+    C:\Path\To\Application\data\images\my_picture.jpg
+    ...
+
+Please note that the data/files/folders I'm bundling for my app are below the main executable/script that I'll be compiling...the "_MEIPASS" part in the function lets pyinstaller know that it's working as a compiled application...**VERY IMPORTANT NOTE: Please use the function "resource_path"** since the "pyi-fixspec.exe" application will be looking for that phrase/function while parsing/correcting the python application pathing
 
 (2) Goto the directory containing the 2 batch files mentioned above and type in either:
 
@@ -58,7 +64,7 @@ If you do edit/change the original python file that has just been previously com
 
 (4) Coffee break -- if you wany to edit/add ICONS to the executable (and other items too), please look at the generated ".spec" file and PyInstaller documentation for configuration details.  You'll just need to kick off this again in the windows console:
 
-    pyi-build.exe C:\path\to\the\file.spec
+    pyi-build.exe C:\path\to\the\pythonfile.spec
 
 ###future stuff###
 * I'll add my "right-click-to-compile" option/application
