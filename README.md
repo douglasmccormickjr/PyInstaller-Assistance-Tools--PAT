@@ -12,10 +12,10 @@ This whole thing came from my struggles with creating **an all-in-one-shot metho
  1. **Install PyInstaller** from: http://www.pyinstaller.org/
  2. After PyInstaller installation-- confirm both "pyi-makespec.exe" and "pyi-build.exe" are in the "C:\Python##\Scripts" directory on your machine
  3. **Download my PyInstaller-Assitance-Tools--PAT** (it's just 2 batch files and 1 executable with the executable's source python file too -- for the paranoid)...The file are listed above:
- * Create_Single_Executable_with_NO_CONSOLE.bat
- * Create_Single_Executable_with_CONSOLE.bat
- * pyi-fixspec.exe
- * pyi-fixpec.py (optional -- this is the source file for the executable -- not needed)
+* Create_Single_Executable_with_NO_CONSOLE.bat
+* Create_Single_Executable_with_CONSOLE.bat
+* pyi-fixspec.exe
+* pyi-fixpec.py (optional -- this is the source file for the executable -- not needed)
 
 Place the exectuable file called "pyi-fixspec.exe" inside the previous "Scripts" folder I mentioned above...this makes compiling much easier in the long run!
 
@@ -37,7 +37,7 @@ and here's my app using it....
 
     source = resource_path("data\\some_archive.zip")
 
-(please note that the data/files/folders I'm bundling for my app are below the main executable/script that I'll be compiling...the "_MEIPASS" part in the function lets pyinstaller know that it's working as a compiled application...Please use the function "resource_path" as my "pyi-fixspec.exe" will be looking for that phrase while parsing/correcting the python application)
+(please note that the data/files/folders I'm bundling for my app are below the main executable/script that I'll be compiling...the "_MEIPASS" part in the function lets pyinstaller know that it's working as a compiled application...**VERY IMPORTANT: Please use the function "resource_path"** since the "pyi-fixspec.exe" application will be looking for that phrase/function while parsing/correcting the python application pathing)
 
 (2) Goto the directory containing the 2 batch files mentioned above and type in either:
 
