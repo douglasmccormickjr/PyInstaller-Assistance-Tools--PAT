@@ -2,10 +2,10 @@
 "...an easier way to compile your python application with PyInstaller..."
 
 ###why?###
-This whole thing came from my struggles with creating an all-in-one-shot method to create a standalone/single application within PyInstaller...ok here goes...link to SO answer I wrote too:
+This whole thing came from my struggles with creating **an all-in-one-shot method to create a standalone/single application** within PyInstaller...ok here goes...link to SO answer I wrote too:
 
 ###but there's other compilers in the wild, right?###
-**Might I suggest using PyInstaller instead of py2exe** (since PyInstaller does a far better job in terms of bundling a single executable).  I'm on Windows about 90% of the time (no complaints here) with my python coding-- PyInstaller is a way better option than py2exe (for me at least --  I've used/test a great deal of Win compilers in the past with varied success).  Maybe other people suffering compiling issues could benefit from this method as well. 
+**Might I suggest using PyInstaller instead of py2exe or anything else for that matter** since PyInstaller does a far better job in terms of bundling a single executable.  I'm on Windows about 90% of the time (no complaints here) with my python coding-- PyInstaller is a way better option than py2exe (for me at least --  I've used/test a great deal of Windows compilers in the past with varied success).  Maybe other people suffering from compiling issues could benefit from this method as well. 
 
 ###PyInstaller Prerequisites:###
 
@@ -15,7 +15,7 @@ This whole thing came from my struggles with creating an all-in-one-shot method 
  * Create_Single_Executable_with_NO_CONSOLE.bat
  * Create_Single_Executable_with_CONSOLE.bat
  * pyi-fixspec.exe
- * pyi-fixpec.py (optional -- this is the source file for the executable)
+ * pyi-fixpec.py (optional -- this is the source file for the executable -- not needed)
 
 Place the exectuable file called "pyi-fixspec.exe" inside the previous "Scripts" folder I mentioned above...this makes compiling much easier in the long run!
 
@@ -37,19 +37,19 @@ and here's my app using it....
 
     source = resource_path("data\\some_archive.zip")
 
-(please note that the data/files/folders I'm bundling for my app are below the main executable/script that I'll be compiling...the "_MEIPASS" part in the function lets pyinstaller know that it's working as a compiled application)
+(please note that the data/files/folders I'm bundling for my app are below the main executable/script that I'll be compiling...the "_MEIPASS" part in the function lets pyinstaller know that it's working as a compiled application...Please use the function "resource_path" as my "pyi-fixspec.exe" will be looking for that phrase while parsing/correcting the python application)
 
 (2) Goto the directory containing the 2 batch files mentioned above and type in either:
 
    C:\MyComputer\Downloads\PAT> Create_Single_Executable_with_NO_CONSOLE.bat C:\Path\to\the\python\file.py
-(ouput exe file results in a GUI app when double clicked)
+(output exe file results in a GUI app when double clicked)
 
-or the other option...
+or the second option...
    
    C:\MyComputer\Downloads\PAT> Create_Single_Executable_with_CONSOLE.bat C:\Path\to\the\python\file.py
-(ouput exe file results in a WINDOWS CONSOLE app when double clicked -- expects commandline activity ONLY)
+(output exe file results in a WINDOWS CONSOLE app when double clicked -- expects commandline activity ONLY)
 
-(3) Your new single-file-executable is done! Check this location:
+(3) Your new single-file-executable is done! Check for it in this location:
 
     C:\Original\Directory\ApplicationDistribution64bit\NameOfPythonFile\dist
 
