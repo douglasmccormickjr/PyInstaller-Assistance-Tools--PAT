@@ -38,9 +38,10 @@ and here's my app using it....
 
 that means the app/files look something like this in terms of directory structure:
 
-    C:\Path\To\Application\myscript_001.py
-    C:\Path\To\Application\data\my_archive_file.zip
-    C:\Path\To\Application\data\images\my_picture.jpg
+    C:\Path\To\Application\myscript_001.py                    <---    main application/script intended to be compiled
+    C:\Path\To\Application\data\my_archive_file.zip           <---,
+    C:\Path\To\Application\data\images\my_picture.jpg         <---|-- supporting files in the bundled app
+    C:\Path\To\Application\data\other_stuff.json              <---'
     ...
 
 Please note that the data/files/folders I'm bundling for my app are below the main executable/script that I'll be compiling...the "_MEIPASS" part in the function lets pyinstaller know that it's working as a compiled application...**VERY IMPORTANT NOTE: Please use the function "resource_path"** since the "pyi-fixspec.exe" application will be looking for that phrase/function while parsing/correcting the python application pathing
